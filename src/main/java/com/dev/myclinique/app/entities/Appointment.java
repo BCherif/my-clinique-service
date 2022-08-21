@@ -1,4 +1,4 @@
-package com.dev.myclinique.app;
+package com.dev.myclinique.app.entities;
 
 import com.dev.myclinique.base.entity.BaseEntity;
 import lombok.*;
@@ -8,20 +8,19 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @EqualsAndHashCode(callSuper = true)
-@Table(name = "doctor")
+@Table(name = "appointment")
 @Entity
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Doctor extends BaseEntity {
-    private String firstName;
-    private String lastName;
-    private String gender;
-    private String phone;
+public class Appointment extends BaseEntity {
     @ManyToOne
-    private Speciality speciality;
+    private Doctor doctor;
     @ManyToOne
     private Department department;
+    @ManyToOne
+    private Patient patient;
+
 }

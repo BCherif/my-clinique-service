@@ -28,12 +28,6 @@ public class InitUsers implements ApplicationRunner {
                 .builder()
                 .username("MyClinique")
                 .password(passwordEncoder.encode("MyClinique2K22"))
-                .firstName("Baba Soumaila")
-                .lastName("MAIGA")
-                .fullName("Baba Soumaila MAIGA")
-                .phone("79369550")
-                .email("cherif@bab.org")
-                .address("Banankabougou")
                 .active(true)
                 .admin(true)
                 .build();

@@ -1,4 +1,4 @@
-package com.dev.myclinique.app;
+package com.dev.myclinique.app.entities;
 
 import com.dev.myclinique.base.entity.BaseEntity;
 import lombok.*;

@@ -37,7 +37,6 @@ public class UserService {
     public CResponse<User> create(User user) {
         if (!userRepository.existsByUsername(user.getUsername())) {
             user.setPassword(passwordEncoder.encode(user.getPassword()));
-            user.setFullName(user.getFirstName() + " " + user.getLastName());
             User utilisateur = userRepository.save(user);
             return CResponse.success(utilisateur, "Utilisateur ajouté avec succes");
         } else {
