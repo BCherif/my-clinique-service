@@ -4,17 +4,23 @@ import com.dev.myclinique.base.entity.BaseEntity;
 import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @EqualsAndHashCode(callSuper = true)
-@Table(name = "service")
+@Table(name = "bill_detail")
 @Entity
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Department extends BaseEntity {
-    private String name;
-    private String description;
+public class BillDetail extends BaseEntity {
+    @ManyToOne
+    private Bill bill;
+    @ManyToOne
+    private Product product;
+    private Integer quantity;
+    private Integer discount;
+    private Double total;
 }

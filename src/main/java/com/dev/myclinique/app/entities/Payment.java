@@ -7,14 +7,12 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @EqualsAndHashCode(callSuper = true)
-@Table(name = "service")
+@Table(name = "payment")
 @Entity
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Department extends BaseEntity {
-    private String name;
-    private String description;
+public class Payment extends BaseEntity {
 }
