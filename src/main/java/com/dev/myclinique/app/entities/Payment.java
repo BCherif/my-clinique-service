@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Data
 @Builder
 @AllArgsConstructor
-@NoArgsConstructor
+//@NoArgsConstructor
 @ToString
 public class Payment extends BaseEntity {
 }
