@@ -15,4 +15,6 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @ToString
 public class Expense extends BaseEntity {
+    private String title;
+    private String description;
 }

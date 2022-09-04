@@ -15,4 +15,5 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @ToString
 public class Payment extends BaseEntity {
+    private double total;
 }
